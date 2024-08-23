@@ -8,6 +8,8 @@ return require('packer').startup(function()
         run = function() vim.fn["mkdp#util#install"]() end
     })
 
+    use {'weirongxu/plantuml-previewer.vim', requires = {{'tyru/open-browser.vim'}, {'aklt/plantuml-syntax'}}}
+
     use {'janko/vim-test', requires = {{'benmills/vimux'}}}
 
     use "sbdchd/neoformat"
