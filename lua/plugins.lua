@@ -69,4 +69,6 @@ return require('packer').startup(function()
 
     use {'elixir-editors/vim-elixir'}
     use {'renderedtext/vim-elixir-alternative-files'}
+
+    use {'jparise/vim-graphql'}
 end)
