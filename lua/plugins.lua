@@ -3,6 +3,8 @@ return require('packer').startup(function()
 
     use 'joaothallis/space-nvim'
 
+    use { "catppuccin/nvim", as = "catppuccin" }
+
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end

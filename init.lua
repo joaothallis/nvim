@@ -18,8 +18,9 @@ else
     vim.cmd([[set background=light]])
 end
 
-vim.opt.termguicolors = true
-vim.cmd [[colorscheme space-nvim]]
+require("catppuccin").setup({background= {dark = "frappe"}})
+
+vim.cmd.colorscheme "catppuccin"
 
 vim.cmd([[
 function! s:build_quickfix_list(lines)
