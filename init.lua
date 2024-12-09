@@ -51,8 +51,20 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 ]])
 
+    local telescope = require("telescope")
+    telescope.setup({
+        defaults = {
+            vimgrep_arguments = {
+                "rg", "--color=never", "--no-heading", "--with-filename",
+                "--line-number", "--column", "--smart-case", "--hidden",
+                "--glob=!.git"
+            }
+        }
+    })
     local builtin = require("telescope.builtin")
     vim.keymap.set("n", "<leader>ff", builtin.git_files, {})
+    vim.keymap.set('n', '<leader>fg', builtin.live_grep,
+                   {desc = 'Telescope live grep'})
 
     vim.api.nvim_set_keymap("n", "<Leader><Leader>",
                             ":call ElixirAlternateFile()<CR>",
