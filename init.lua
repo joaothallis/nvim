@@ -114,7 +114,7 @@ nmap <silent> <leader>g :TestVisit<CR>
         },
         ensure_installed = {
             "dockerls", "jsonls", "elixirls", "yamlls", "lua_ls", "ltex",
-            "clangd"
+            "clangd", "ts_ls"
         }
     })
 
