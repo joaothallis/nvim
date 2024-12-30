@@ -113,7 +113,7 @@ nmap <silent> <leader>g :TestVisit<CR>
             end
         },
         ensure_installed = {
-            "dockerls", "jsonls", "elixirls", "yamlls", "lua_ls", "ltex",
+            "dockerls", "jsonls", "lexical", "yamlls", "lua_ls", "ltex",
             "clangd", "ts_ls"
         }
     })
