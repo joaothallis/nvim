@@ -87,7 +87,7 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 ]])
 
-    g.markdown_fenced_languages = {"python", "elixir", "bash", "dockerfile"}
+    g.markdown_fenced_languages = {"python", "elixir", "bash", "dockerfile", 'sh=bash'}
 
     require("refactoring").setup()
     vim.keymap.set("x", "<leader>rv", function()
