@@ -3,24 +3,29 @@ return require('packer').startup(function()
 
     use 'joaothallis/space-nvim'
 
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use {"catppuccin/nvim", as = "catppuccin"}
 
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end
     })
 
-    use {'weirongxu/plantuml-previewer.vim', requires = {{'tyru/open-browser.vim'}, {'aklt/plantuml-syntax'}}}
+    use {
+        'weirongxu/plantuml-previewer.vim',
+        requires = {{'tyru/open-browser.vim'}, {'aklt/plantuml-syntax'}}
+    }
 
     use {'janko/vim-test', requires = {{'benmills/vimux'}}}
 
     use "sbdchd/neoformat"
 
-    use { "ThePrimeagen/refactoring.nvim",
-	requires = {
-	    {"nvim-lua/plenary.nvim"},
-	    {"nvim-treesitter/nvim-treesitter"}
-	}
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+
+    use {
+        "ThePrimeagen/refactoring.nvim",
+        requires = {
+            {"nvim-lua/plenary.nvim"}, {"nvim-treesitter/nvim-treesitter"}
+        }
     }
 
     use {

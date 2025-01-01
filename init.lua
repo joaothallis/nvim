@@ -87,7 +87,14 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 ]])
 
-    g.markdown_fenced_languages = {"python", "elixir", "bash", "dockerfile", 'sh=bash'}
+    g.markdown_fenced_languages = {
+        "python", "elixir", "bash", "dockerfile", 'sh=bash'
+    }
+
+    require'nvim-treesitter.configs'.setup {
+        ensure_installed = {"heex"},
+        highlight = {enable = true}
+    }
 
     require("refactoring").setup()
     vim.keymap.set("x", "<leader>rv", function()
