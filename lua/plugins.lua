@@ -1,8 +1,6 @@
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
-    use 'joaothallis/space-nvim'
-
     use {"catppuccin/nvim", as = "catppuccin"}
 
     use({
