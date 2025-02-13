@@ -66,8 +66,6 @@ return require('packer').startup(function()
         config = function() require('Comment').setup() end
     }
 
-    use {'github/copilot.vim'}
-
     use {'bogado/file-line'}
 
     use {'elixir-editors/vim-elixir'}
