@@ -66,6 +66,27 @@ return require('packer').startup(function()
         config = function() require('Comment').setup() end
     }
 
+    -- Avante.nvim with build process
+    use {
+        'yetone/avante.nvim',
+        branch = 'main',
+        run = 'make',
+        config = function()
+            require('avante_lib').load()
+            require('avante').setup()
+        end,
+        requires = {
+            -- Required dependencies
+            {'stevearc/dressing.nvim'}, {'nvim-lua/plenary.nvim'},
+            {'MunifTanjim/nui.nvim'},
+            {'MeanderingProgrammer/render-markdown.nvim'},
+
+            -- Optional dependencies
+            {'hrsh7th/nvim-cmp'}, {'nvim-tree/nvim-web-devicons'},
+            {'HakonHarnes/img-clip.nvim'}
+        }
+    }
+
     use {'bogado/file-line'}
 
     use {'elixir-editors/vim-elixir'}

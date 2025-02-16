@@ -11,7 +11,15 @@ else
 
     o.swapfile = false
 
+    -- views can only be fully collapsed with the global statusline
+    vim.opt.laststatus = 3
+
     require("plugins")
+
+    require('img-clip').setup({})
+    require('render-markdown').setup({})
+    require('avante_lib').load()
+    require('avante').setup({provider = 'openai'})
 
     local time = os.date("*t")
     if time.hour < 6 or time.hour >= 18 then
